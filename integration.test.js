@@ -5,7 +5,7 @@ import {
   AttributeIds,
   StatusCodes
 } from "node-opcua";
-import { startServer } from "../server.js";
+import { startServer } from "./server.js";
 
 let server;
 let endpointUrl;
