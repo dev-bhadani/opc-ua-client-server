@@ -1,0 +1,32 @@
+name: OPC UA Server & Client
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-opcua:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start OPC UA server
+        run: |
+          npm run server &
+          echo "Waiting for server to start..."
+          sleep 5
+
+      - name: Run OPC UA client
+        run: npm run client
