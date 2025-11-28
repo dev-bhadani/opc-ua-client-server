@@ -1,0 +1,22 @@
+{
+  "name": "opcua-demo",
+  "version": "1.0.0",
+  "description": "OPC UA server and client communication using node-opcua.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node client.js"
+  },
+  "keywords": [
+    "opcua",
+    "node-opcua",
+    "industrial",
+    "demo"
+  ],
+  "author": "Shaileshkumar Bhadani",
+  "license": "MIT",
+  "dependencies": {
+    "node-opcua": "^2.158.0"
+  }
+}
