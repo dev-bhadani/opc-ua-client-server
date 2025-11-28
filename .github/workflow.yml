@@ -22,11 +22,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Start OPC UA server
-        run: |
-          npm run server &
-          echo "Waiting for server to start..."
-          sleep 5
-
-      - name: Run OPC UA client
-        run: npm run client
+      - name: Run integration tests
+        run: npm test
