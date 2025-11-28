@@ -55,6 +55,8 @@ export async function startServer() {
     nodeId: "ns=1;s=MyDevice.Pressure",
     dataType: "Double",
     minimumSamplingInterval: 100,
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead",
     value: {
       get: () =>
         new Variant({
