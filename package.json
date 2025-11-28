@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
-    "client": "node client.js"
+    "client": "node client.js",
+    "test": "node --test"
   },
   "keywords": [
     "opcua",
